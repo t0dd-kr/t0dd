@@ -71,7 +71,11 @@
     justify-content: center;
   }
 
-  #about {
+  figure {
+    margin: 0;
+  }
+
+  article#about {
     width: 500px;
     font-size: 32px;
     box-sizing: border-box;
@@ -94,10 +98,6 @@
 
   .flex {
     display: flex;
-  }
-
-  figure {
-    margin: 0;
   }
 
   .container-canvas {
@@ -149,6 +149,7 @@
       }
     }
   }
+
   .container-icons {
     & svg {
       margin-right: 20px;
