@@ -27,19 +27,28 @@
             Hello, <br>
             I'm t0dd. <br>
           </h1>
-          <h4>I'm Web Developer who loves Javascript ecosystem.</h4>
+          <div class="introduce">I'm Web Developer who loves Javascript ecosystem.</div>
           <div class="container-icons">
-            <a href="https://github.com/t0dd-kr" target="__blank">
-              <svg id="github" width="40" height="42" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.2857 32.381C7.14236 34.631 7.47569 27.7976 4.61903 27.0476M25.7142 39.0476V29.5476C25.7142 27.881 25.7602 26.706 24.7619 25.7143C29.4135 25.2143 33.3333 23.5567 33.3333 15.7667C33.3268 13.7602 32.5284 11.8375 31.1116 10.4167C31.4459 9.55586 31.6063 8.63731 31.5834 7.71415C31.5605 6.79099 31.3548 5.88152 30.9783 5.03833C30.9783 5.03833 29.2283 4.53833 25.185 7.15C21.7851 6.2638 18.2148 6.2638 14.815 7.15C10.77 4.53833 9.02162 5.03833 9.02162 5.03833C8.64506 5.88152 8.4394 6.79099 8.41651 7.71415C8.39363 8.63731 8.55398 9.55586 8.88829 10.4167C8.18148 11.1254 7.62143 11.9665 7.2402 12.892C6.85897 13.8175 6.66406 14.8091 6.66662 15.81C6.66662 23.5433 10.5864 25.1576 15.2381 25.7143C14.2531 26.696 14.1857 28.3526 14.2857 29.7143V39.0476" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <a href="https://github.com/t0dd-kr" target="__blank" name="github">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.3609 35C12.8491 32.5 14.1192 21.25 19.1997 17.5C18.197 15.9789 16.6594 10 17.9295 7.50003C20.4698 8.75 23.8793 10.5986 25.5504 12.5C30.631 10 38.2518 10 42.0623 12.5C43.0649 10.4718 46.7419 8.55634 48.413 7.5C49.917 9.02113 48.8308 14.9648 48.413 17.5C50.9196 22.993 52.2235 31.25 38.2518 35C40.9475 37.1811 45.7836 43.3079 47.7205 49.4971C48.1534 50.8804 46.8374 52.0671 45.4267 51.7341C42.3129 50.9991 37.3176 50 33.1714 50C28.724 50 22.1317 51.1495 18.3483 51.8896C16.9413 52.1649 15.7393 50.9447 16.256 49.6073C17.5807 46.1788 20.1145 41.8998 23.0102 40C22.3836 39.1549 19.9012 36.7218 15.3893 38.75C9.74948 41.2852 6.51518 35.669 7.76848 32.5" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+              <label for="github"></label>
             </a>
 
-            <a href="mailto:t0dd@t0dd.kr">
-              <svg id="google" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.5646 8.66902C28.626 5.6702 24.5303 3.80952 20 3.80952C11.0582 3.80952 3.80952 11.0582 3.80952 20C3.80952 28.9418 11.0582 36.1905 20 36.1905C28.9418 36.1905 36.1905 28.9418 36.1905 20H20.8095" stroke-width="4" stroke-linecap="round"/>
+            <a href="mailto:t0dd@t0dd.kr" name="mail">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 32.5L7.5 15.2062C7.5 12.9584 9.8927 11.694 11.5348 13.074L23.8606 23.4322C27.4717 26.4669 32.5283 26.4669 36.1394 23.4322L48.4652 13.074C50.1073 11.694 52.5 12.9584 52.5 15.2062V44.7988C52.5 46.2906 51.3807 47.5 50 47.5L10 47.5C8.61929 47.5 7.5 46.2906 7.5 44.7988L7.5 40" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </a>            
+              <label for="mail"></label>
+            </a>
+
+            <a href="https://about.t0dd.kr" target="__blank" name="notion">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.3 24.2257V44.2367L37.95 44.4856L26.6 24.823L24.5 25.0221V52.5L50 50.708V15.1641L38.35 7.5L7.5 10.2422V42.8429L15.8 52.5V17.7656L40.3 15.7958" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <label for="notion"></label>
+            </a>
           </div>
         </article>
       </div>
@@ -80,6 +89,7 @@
     }
 
     h1 { font-size: 1.5em }
+    .introduce { margin-bottom: 1.33em }
   }
 
   .flex {
