@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index,follow">
+    <meta name="content-language" content="kr">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <meta name="author" content="t0dd"/>
+    <meta name="title" content="I'm t0dd">
+    <meta name="description" content="I'm Web Developer who loves Javascript ecosystem.">
+    <meta property="og:title" content="I'm t0dd">
+    <meta property="og:description" content="I'm Web Developer who loves Javascript ecosystem.">
+    <meta name="keywords" content="t0dd">
+    <meta name="reply-to" content="t0dd@t0dd.kr">
+
+    <meta name="google-site-verification" content=""/>
+    <meta name="naver-site-verification" content=""/>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <link rel="icon" type="image/x-icon" href="favicons/default/favicon.ico">
+    <link rel="icon" type="image/png" href="favicons/default/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicons/default/favicon-32x32.png" sizes="32x32" /> -->
+    <link rel="canonical" href="https://t0dd.kr">
+    <title>I'm t0dd</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/three@^0.131.0/build/three.min.js"></script>
+    <script src="/js/spline-runtime.js"></script>
+    <script>
+      let isAppStarted = false
+      let app = null
+      let interval = setInterval(() => {
+        if(isAppStarted) {
+          if(app._running) {
+            window.isSplineAppLoaded = true
+            clearInterval(interval)
+          }
+        } else if(document.querySelector('canvas')) {
+          app = new SpeRuntime.Application();
+          app.start('scene.json');
+          
+          isAppStarted = true
+        }
+      }, 10)
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
