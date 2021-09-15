@@ -73,6 +73,7 @@
       align-items: flex-start;
       @media (max-width: 600px) {
         padding-top: 30px;
+        box-sizing: border-box;
       }
     }
   }
