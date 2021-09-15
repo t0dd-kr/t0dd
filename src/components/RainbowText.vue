@@ -45,7 +45,7 @@
 </script>
 
 <template>
-  <div class="rainbow" v-for="(letter, i) in letters" @mouseover="startAnimation" @touchmove="startAnimation" :key="i">{{ letter }}</div>
+  <div class="rainbow" v-for="(letter, i) in letters" @mouseover="startAnimation" :key="i">{{ letter }}</div>
 </template>
 
 <style scoped lang="scss">
