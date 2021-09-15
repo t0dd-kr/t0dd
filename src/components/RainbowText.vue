@@ -1,10 +1,11 @@
 <script setup lang="ts">
-  import anime from 'animejs/lib/anime.es.js';
+  import anime from 'animejs';
+
   const props = defineProps({
-    letters: String
+    letters: null
   })
 
-  function startAnimation(e) {
+  function startAnimation(e :any) {
     let rainbowAnimation = anime({
       targets: [e.target],
       duration: 1000,
@@ -44,7 +45,7 @@
 </script>
 
 <template>
-  <div :class="'rainbow'" v-for="(letter, l) in letters" @mouseover="startAnimation" @touchmove="startAnimation">{{ letter }}</div>
+  <div class="rainbow" v-for="(letter, i) in letters" @mouseover="startAnimation" @touchmove="startAnimation" :key="i">{{ letter }}</div>
 </template>
 
 <style scoped lang="scss">

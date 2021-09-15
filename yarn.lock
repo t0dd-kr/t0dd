@@ -39,6 +39,11 @@
   "resolved" "https://registry.npmjs.org/@emmetio/scanner/-/scanner-1.0.0.tgz"
   "version" "1.0.0"
 
+"@types/animejs@^3.1.4":
+  "integrity" "sha512-WUjeFT2SXd6intfE6cg6eL1jk/JL88JqM2gC4WqO4iHLmbCvHUq6aoLK13lGpDWs4FtS2PHoYraJZ0dEx99Dyg=="
+  "resolved" "https://registry.npmjs.org/@types/animejs/-/animejs-3.1.4.tgz"
+  "version" "3.1.4"
+
 "@types/estree@^0.0.48":
   "integrity" "sha512-LfZwXoGUDo0C3me81HXgkBg5CTQYb6xzEl+fNmbO4JdRiSKQ8A0GD1OBBvKAIsbCUgoyAty7m99GqqMQe784ew=="
   "resolved" "https://registry.npmjs.org/@types/estree/-/estree-0.0.48.tgz"
