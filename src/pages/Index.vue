@@ -19,8 +19,8 @@
     <section>
       <div class="flex">
         <figure class="container-canvas">
-          <img src="@/assets/t.svg" alt="t0dd" :class="[{ faded: splineLoaded }]">
-          <canvas id="canvas3d" :class="[{ faded: !splineLoaded }]"></canvas>
+          <img src="@/assets/t_3d.png" alt="t0dd">
+          <canvas id="canvas3d"></canvas>
         </figure>
         <article id="about">
           <h1>
@@ -130,9 +130,6 @@
         height: 100vw;
         box-sizing: border-box;
       }
-      &.faded {
-        opacity: 0;
-      }
     }
 
     & #canvas3d { 
@@ -141,12 +138,6 @@
       left: 0;
       width: 100% !important;
       height: 100% !important;
-
-      transition: opacity 1s;
-      opacity: 1;
-      &.faded {
-        opacity: 0;
-      }
     }
   }
 
