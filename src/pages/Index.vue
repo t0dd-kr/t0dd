@@ -71,6 +71,7 @@
     align-items: center;
     @media (max-width: 1100px) {
       align-items: flex-start;
+      height: auto;
       @media (max-width: 600px) {
         padding-top: 30px;
         box-sizing: border-box;
