@@ -21,7 +21,7 @@
         </figure>
         <article id="about">
           <h1>
-            <RainbowText letters="Hello,"/>
+            <RainbowText letters="Hello, "/>
             <br>
             <RainbowText letters="I'm t0dd."/>
           </h1>
@@ -91,10 +91,10 @@
 
     @media (max-width: 1100px) {
       padding-left: 0px;
+      max-width: 480px;
       
       @media (max-width: 600px) {
         width: 100%;
-        max-width: 500px;
         padding: 0 20px;
         font-size: 24px;
       }
@@ -133,9 +133,8 @@
     justify-content: center;
     
     @media (max-width: 1100px) {
-      max-width: 450px;
-      max-height: 450px;
-      padding: 0 75px;
+      max-width: 480px;
+      max-height: 480px;
       width: 100vw;
       height: 100vw;
       box-sizing: border-box;
@@ -147,8 +146,8 @@
       transition: opacity 1s;
       opacity: 1;
       @media (max-width: 1100px) {
-        max-width: 450px;
-        max-height: 450px;
+        max-width: 480px;
+        max-height: 480px;
         width: 100vw;
         height: 100vw;
         box-sizing: border-box;
