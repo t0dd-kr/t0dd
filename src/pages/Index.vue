@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import RainbowText from '@/components/RainbowText.vue'
   import { ref } from 'vue'
   let splineLoaded = ref(false)
 
@@ -8,10 +9,6 @@
       clearInterval(interval);
     }
   }, 500)
-
-  function setup() {
-    return { splineLoaded }
-  }
 </script>
 
 <template>
@@ -24,10 +21,13 @@
         </figure>
         <article id="about">
           <h1>
-            Hello, <br>
-            I'm t0dd. <br>
+            <RainbowText letters="Hello,"/>
+            <br>
+            <RainbowText letters="I'm t0dd."/>
           </h1>
-          <div class="introduce">I'm Web Developer who loves Javascript ecosystem.</div>
+          <div class="introduce">
+            <RainbowText letters="I'm Web Developer who loves Javascript ecosystem."/>
+          </div>
           <div class="container-icons">
             <a href="https://github.com/t0dd-kr" target="__blank" name="github">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,8 +67,14 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    @media (max-width: 1100px) {
+      align-items: flex-start;
+      @media (max-width: 600px) {
+        padding-top: 30px;
+      }
+    }
   }
 
   figure {
@@ -92,8 +98,24 @@
       }
     }
 
-    h1 { font-size: 1.5em }
-    .introduce { margin-bottom: 1.33em }
+    h1 { 
+      font-size: 1.5em;
+      margin: 2vh 0;
+      @media (max-width: 1100px) {
+        font-size: 8vw;
+        & br {
+          display: none;
+        }
+        margin-top: 0;
+      }
+    }
+    .introduce { 
+      margin-bottom: 1.33em;
+      @media (max-width: 1100px) {
+        margin-bottom: 1em;
+        font-size: 6vw;
+      }
+    }
   }
 
   .flex {
@@ -109,9 +131,9 @@
     justify-content: center;
     
     @media (max-width: 1100px) {
-      max-width: 500px;
-      max-height: 500px;
-      padding: 0 50px;
+      max-width: 450px;
+      max-height: 450px;
+      padding: 0 75px;
       width: 100vw;
       height: 100vw;
       box-sizing: border-box;
@@ -123,9 +145,8 @@
       transition: opacity 1s;
       opacity: 1;
       @media (max-width: 1100px) {
-        max-width: 500px;
-        max-height: 500px;
-        padding: 0 50px;
+        max-width: 450px;
+        max-height: 450px;
         width: 100vw;
         height: 100vw;
         box-sizing: border-box;
@@ -143,6 +164,10 @@
 
   .container-icons {
     & svg {
+      @media (max-width: 600px) {
+        width: 40px;
+        height: 40px;
+      }
       margin-right: 20px;
 
       & path {
