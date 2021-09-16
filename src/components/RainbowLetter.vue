@@ -1,26 +1,28 @@
 <script setup lang="ts">
   import anime from 'animejs';
   import type { AnimeInstance } from 'animejs';
-  import { useMouse } from '@vueuse/core'
   import { useMouseInElement } from '@vueuse/core'
   import { ref, watch, onMounted } from 'vue'
+  import { useStore } from 'vuex'
+
+  const store = useStore()
+  const { mouseX, mouseY } = store.state
 
   const props = defineProps({
     letter: null
   })
 
   const target = ref(null)
-  const { x: mouseX, y: mouseY } = useMouse()
   const { isOutside } = useMouseInElement(target)
 
   watch(isOutside, isOutside => {
     if (isOutside) {
       setTimeout(() => {
         rainbowAnimation?.pause()
-        resetAnimation?.play()
+        resetAnimation?.restart()
       }, 500)
     } else {
-      rainbowAnimation?.play()
+      rainbowAnimation?.restart()
     }
   })
 

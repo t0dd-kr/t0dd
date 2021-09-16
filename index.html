@@ -49,13 +49,22 @@
             window.isSplineAppLoaded = true
             clearInterval(interval)
           }
-        } else if(document.querySelector('canvas')) {
+        } else if(document.querySelector('canvas') && !app) {
           app = new SpeRuntime.Application();
           app.start('scene.json');
           
           isAppStarted = true
         }
       }, 10)
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W03STGWN14"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W03STGWN14');
     </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
